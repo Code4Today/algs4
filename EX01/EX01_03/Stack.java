@@ -2,11 +2,11 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Stack<Item> implements Iterable<Item> {
-    private Node first;
+    private Node<Item> first;
     private int N;
-    private class Node {
+    private class Node<Item> {
         Item item;
-        Node next;
+        Node<Item> next;
     }
     
     public boolean isEmpty() {  
@@ -18,8 +18,8 @@ public class Stack<Item> implements Iterable<Item> {
     }
     
     public void push(Item item) {
-        Node oldfirst = first;
-        first = new Node();
+        Node<Item> oldfirst = first;
+        first = new Node<Item>();
         first.item = item;
         first.next = oldfirst;
         N++;
@@ -41,7 +41,7 @@ public class Stack<Item> implements Iterable<Item> {
     
     public String toString () {
         String stack_sum = "";
-        Node itr = first;
+        Node<Item> itr = first;
         while (itr != null) {
             stack_sum = stack_sum + itr.item + " ";
             itr = itr.next;
@@ -54,7 +54,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     
     public class ListIterator implements Iterator<Item> {
-        private Node current = first;
+        private Node<Item> current = first;
         
         public boolean hasNext() {
             return current != null;
