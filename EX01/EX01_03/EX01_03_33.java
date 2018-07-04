@@ -1,0 +1,66 @@
+public class EX01_03_33 {
+
+    public static void main(String[] args) {
+        Deque<Integer> ll = new Deque<Integer>();
+        ll.pushLeft(543);
+        StdOut.println(ll);
+        ll.popRight();
+        StdOut.println(ll);
+        ll.pushRight(78);
+        StdOut.println(ll);
+        ll.popLeft();
+        StdOut.println(ll);
+        ll.pushLeft(78);
+        StdOut.println(ll);
+        ll.pushLeft(983);
+        StdOut.println(ll);
+        ll.pushRight(65);
+        StdOut.println(ll);
+        ll.pushRight(78);
+        StdOut.println(ll);
+        ll.pushLeft(19);
+        StdOut.println(ll);
+        ll.pushRight(78);
+        StdOut.println(ll);
+        ll.popRight();
+        StdOut.println(ll);
+        ll.popLeft();
+        StdOut.println(ll);
+        StdOut.println(ll.size());
+        ResizingArrayDeque<Integer> ll2 = new ResizingArrayDeque<Integer>();
+        ll2.pushLeft(543);
+        StdOut.println(ll2);
+        ll2.popRight();
+        StdOut.println(ll2);
+        ll2.pushRight(78);
+        StdOut.println(ll2);
+        ll2.popLeft();
+        StdOut.println(ll2);
+        ll2.pushLeft(78);
+        StdOut.println(ll2);
+        ll2.pushLeft(983);
+        StdOut.println(ll2);
+        ll2.pushRight(65);
+        StdOut.println(ll2);
+        ll2.pushRight(78);
+        StdOut.println(ll2);
+        ll2.pushLeft(19);
+        StdOut.println(ll2);
+        ll2.pushLeft(195);
+        StdOut.println(ll2);
+        ll2.pushRight(78);
+        StdOut.println(ll2);
+        ll2.popRight();
+        StdOut.println(ll2);
+        ll2.popLeft();
+        ll2.popLeft();
+        ll2.popLeft();
+        ll2.popLeft();
+        StdOut.println(ll2);
+        ll2.popLeft();
+        StdOut.println(ll2);
+        ll2.popLeft();
+        StdOut.println(ll2);
+        StdOut.println(ll2.size());
+    }
+}

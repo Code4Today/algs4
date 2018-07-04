@@ -8,7 +8,24 @@ public class Stack<Item> implements Iterable<Item> {
         Item item;
         Node<Item> next;
     }
-    
+
+    public Stack() {
+        first = null;
+        N = 0;
+    }
+
+    public Stack(Stack<Item> stack){
+        Stack<Item> copy = new Stack<Item>();
+        while(!stack.isEmpty()) {
+            copy.push(stack.pop());
+        }
+        while(!copy.isEmpty()) {
+            Item itr = copy.pop();
+            this.push(itr);
+            stack.push(itr);
+        }
+    }
+
     public boolean isEmpty() {  
         return first == null;                    
     }
